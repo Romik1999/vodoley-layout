@@ -1,0 +1,71 @@
+@import "./vars";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $black;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @media screen and (max-width: 995px) {
+    font-size: 16px;
+  }
+}
+
+main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  position: relative;
+  padding: 20px 30px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 576px) {
+    padding: 20px;
+  }
+}
+
+.cont {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+input {
+  &:focus,
+  &:focus-visible {
+    outline: 2px solid blue;
+  }
+}
+
+.swiper{
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 1001px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 769px) {
+}
+
+@media screen and (max-width: 575px) {
+}
+
+@media screen and (max-width: 425px) {
+}
+
+@media screen and (max-width: 350px) {
+}
