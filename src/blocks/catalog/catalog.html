@@ -1,0 +1,24 @@
+<section class="catalog">
+    <div class="cont">
+        @@include('page-title/page-title.html', {customClass: 'catalog__title', text: 'Плитка'})
+        <div class="catalog__wrapper">
+            <div class="catalog__filter">
+                @@include('filter/filter.html')
+            </div>
+            <div class="catalog__content">
+                <div class="catalog__presets">
+                    @@include('catalog-presets/catalog-presets.html')
+                </div>
+                <div class="catalog__top">
+                    <div class="catalog__views">
+                        @@include('catalog-views/catalog-views.html')
+                    </div>
+                    <div class="catalog__sort">
+                        @@include('catalog-sort/catalog-sort.html')
+                    </div>
+                </div>
+                <div class="catalog__items"></div>
+            </div>
+        </div>
+    </div>
+</section>

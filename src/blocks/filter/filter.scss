@@ -1,0 +1,135 @@
+@import "../../scss/vars";
+
+.filter {
+  background-color: $white;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+
+  &__categories {
+    padding: 16px 20px;
+  }
+
+  &__group {
+    border: 1px solid #E1E4E8;
+    padding: 16px 20px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 17px;
+    color: $black;
+    margin-bottom: 23px;
+  }
+
+  &__content {
+    margin-bottom: 16px;
+  }
+
+  &__row {
+    display: flex;
+    column-gap: 14px;
+  }
+
+  &__input {
+    border: 1px solid #CCCFD4;
+    border-radius: 20px;
+    height: 40px;
+    padding: 11px 15px;
+    box-sizing: border-box;
+    width: 100%;
+
+    font-size: 13px;
+    line-height: 124%;
+    color: #111111;
+
+    &::placeholder {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 124%;
+      color: #CCCFD4;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border: 1px solid $purple;
+    }
+  }
+
+  &__btns {
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+
+
+    & .filter__btn {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.filter-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked + .filter-checkbox__icon {
+      background: $purple;
+      border: 1px solid $purple;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #CCCFD4;
+    border-radius: 3px;
+    transition: 0.2s;
+
+    &:before {
+      content: "\2714";
+      width: 20px;
+      height: 20px;
+      display: flex;
+      color: $white;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 120%;
+    color: #111111;
+  }
+
+  &__count {
+    font-size: 14px;
+    line-height: 130%;
+    color: #64707B;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../scss/vars";
+
+.catalog {
+  &__wrapper {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__filter {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  &__content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__presets {
+    margin-bottom: 30px;
+  }
+
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    border-bottom: 1px solid #EEF0F3;
+    margin-bottom: 17px;
+  }
+}

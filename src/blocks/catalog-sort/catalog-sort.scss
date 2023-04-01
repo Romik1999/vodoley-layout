@@ -1,0 +1,24 @@
+@import "../../scss/vars";
+
+.catalog-sort {
+  &__items {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__item {
+    font-size: 15px;
+    line-height: 123%;
+    position: relative;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: $black;
+
+    &--active,
+    &:hover{
+      font-weight: 500;
+    }
+  }
+}
