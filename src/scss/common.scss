@@ -9,10 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
-  @media screen and (max-width: 995px) {
-    font-size: 16px;
-  }
+  font-size: 16px;
 }
 
 main {
@@ -23,11 +20,11 @@ main {
 
 section {
   position: relative;
-  padding: 20px 30px;
+  padding: 0 30px;
   box-sizing: border-box;
 
   @media screen and (max-width: 576px) {
-    padding: 20px;
+    padding: 0 15px;
   }
 }
 
@@ -45,7 +42,7 @@ input {
   }
 }
 
-.swiper{
+.swiper {
   overflow: hidden;
 }
 
