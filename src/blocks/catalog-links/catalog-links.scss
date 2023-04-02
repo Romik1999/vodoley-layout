@@ -1,0 +1,48 @@
+@import "../../scss/vars";
+
+.catalog-links {
+  &__group {
+    border-bottom: 1px solid #C4C4C4;
+    padding: 20px 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 120%;
+    color: $black;
+    text-decoration: none;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__more{
+    font-size: 13px;
+    line-height: 138%;
+    text-decoration-line: underline;
+    color: #175085;
+    display: block;
+    margin-top: 12px;
+  }
+}
