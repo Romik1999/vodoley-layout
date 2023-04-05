@@ -6,7 +6,7 @@
   &__title {
     display: none;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 576px) {
       display: block;
       font-size: 18px;
       padding-top: 10px;
@@ -39,7 +39,7 @@
     align-items: center;
     column-gap: 20px;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 576px) {
       position: absolute;
       top: 100%;
       background-color: $white;
@@ -53,7 +53,7 @@
     }
 
     &.active {
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 576px) {
         max-height: 120px;
       }
     }
@@ -68,7 +68,7 @@
     text-decoration: none;
     color: $black;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 576px) {
       font-size: 16px;
       padding: 10px 20px;
       width: 100%;
@@ -78,7 +78,7 @@
     &:hover {
       font-weight: 500;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 576px) {
         background-color: $purple;
         color: $white;
       }

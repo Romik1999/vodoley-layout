@@ -6,7 +6,7 @@
   &__title{
     display: none;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 576px) {
       display: block;
       font-size: 18px;
       padding-top: 10px;
@@ -39,7 +39,7 @@
     align-items: center;
     column-gap: 40px;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 576px) {
       position: absolute;
       top: 100%;
       background-color: $white;
@@ -52,7 +52,7 @@
     }
 
     &.active{
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 576px) {
         max-height: 120px;
       }
     }
@@ -68,7 +68,7 @@
     transition: 0.2s;
     cursor: pointer;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 576px) {
       font-size: 16px;
       padding: 10px 20px;
       width: 100%;
@@ -88,7 +88,7 @@
       left: 0;
       transition: 0.2s;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 576px) {
         display: none;
       }
     }
@@ -96,7 +96,7 @@
     &--active {
       color: $black;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 576px) {
         background-color: $purple;
         color: $white;
       }

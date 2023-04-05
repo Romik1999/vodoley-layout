@@ -15,7 +15,7 @@
     box-sizing: border-box;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 576px) {
     padding-right: 45px;
   }
 
@@ -63,7 +63,7 @@
       display: block;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 576px) {
       width: 30px;
       height: 30px;
       top: 10px;
