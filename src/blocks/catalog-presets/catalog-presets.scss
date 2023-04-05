@@ -37,6 +37,8 @@
 
   &__item {
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5px 15px;
     border: 1px solid #E2E2E2;
     border-radius: 3px;
@@ -50,9 +52,12 @@
     box-sizing: border-box;
 
     &--active {
-
       border: 1px solid #333333;
       box-shadow: inset 0px 0px 0px 1.6px #333333;
+    }
+
+    &:hover{
+      background: #F4F6F7;
     }
   }
 
@@ -63,5 +68,10 @@
     color: #111111;
     margin-top: 10px;
     display: none;
+    cursor: pointer;
+
+    &:hover{
+      color: $purple;
+    }
   }
 }
