@@ -1,10 +1,41 @@
 @import "../../scss/vars";
 
 .catalog-item {
-  background: $white;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
-  border-radius: 8px;
-  padding: 10px;
+  position: relative;
+  height: 450px;
+
+  @media screen and (max-width: 1230px) {
+    height: 470px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 410px;
+  }
+
+  &__wrapper {
+    background: $white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    padding: 11px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.2s;
+  }
+
+  &:hover {
+    & .catalog-item__wrapper {
+      position: absolute;
+      height: auto;
+      z-index: 10;
+      padding-bottom: 12px;
+    }
+
+    & .catalog-item__button {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   &__img {
     display: flex;
@@ -13,6 +44,14 @@
     margin-bottom: 16px;
     text-decoration: none;
     overflow: hidden;
+
+    @media screen and (max-width: 1230px) {
+      height: 216px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      height: 192px;
+    }
 
     & img {
       width: 100%;
@@ -71,6 +110,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+    position: relative;
+    z-index: 12;
+    background-color: $white;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
   }
 
   &__color {
@@ -90,6 +134,12 @@
   }
 
   &__bottom {
-    margin-top: 16px;
+
+  }
+
+  &__button {
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.2s;
   }
 }
