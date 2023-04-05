@@ -57,4 +57,39 @@ document.addEventListener('DOMContentLoaded', () => {
             filterSortItems.classList.add('active')
         }
     });
-})
+
+
+    let catalogPresets = document.querySelectorAll('.catalog-presets__group');
+    let catalogPresetButtons = document.querySelectorAll('.catalog-presets__more');
+
+    if (catalogPresets) {
+        catalogPresets.forEach((catalogPreset, i) => {
+            let catalogPresetItems = catalogPreset.querySelector('.catalog-presets__items');
+            let catalogPresetItem = catalogPreset.querySelector('.catalog-presets__item');
+            let catalogPresetButton = catalogPreset.querySelector('.catalog-presets__more');
+            let catalogPresetItemsHeight = catalogPresetItems.offsetHeight;
+            let catalogPresetItemHeight = catalogPresetItem.offsetHeight;
+
+            if (catalogPresetItemsHeight > catalogPresetItemHeight) {
+                catalogPresetItems.classList.add('max-content');
+                catalogPresetButton.style.display = 'block';
+            }
+        });
+    }
+
+    if (catalogPresetButtons) {
+        catalogPresetButtons.forEach((catalogPresetButton, i) => {
+            catalogPresetButton.addEventListener('click', (e) => {
+                if (e.target.classList.contains('active')) {
+                    e.target.classList.remove('active');
+                    e.target.textContent = 'Показать еще';
+                    e.target.parentNode.querySelector('.catalog-presets__items.max-content').classList.remove('active');
+                } else {
+                    e.target.classList.add('active');
+                    e.target.textContent = 'Скрыть';
+                    e.target.parentNode.querySelector('.catalog-presets__items.max-content').classList.add('active');
+                }
+            })
+        });
+    }
+});

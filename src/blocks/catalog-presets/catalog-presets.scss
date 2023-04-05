@@ -18,15 +18,26 @@
     color: #777777;
     margin-bottom: 8px;
   }
-  &__items{
+
+  &__items {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
+    &.max-content{
+      max-height: 30px;
+      overflow: hidden;
+      transition: 0.3s;
+
+      &.active{
+        max-height: 200px;
+      }
+    }
   }
 
-  &__item{
+  &__item {
     display: flex;
-    padding: 7.5px 15px;
+    padding: 5px 15px;
     border: 1px solid #E2E2E2;
     border-radius: 3px;
     font-size: 13px;
@@ -35,18 +46,22 @@
     text-decoration: none;
     cursor: pointer;
     transition: 0.2s;
+    height: 30px;
+    box-sizing: border-box;
 
-    &--active{
+    &--active {
 
       border: 1px solid #333333;
       box-shadow: inset 0px 0px 0px 1.6px #333333;
     }
   }
 
-  &__more{
+  &__more {
     font-size: 13px;
     line-height: 138%;
     text-decoration-line: underline;
     color: #111111;
+    margin-top: 10px;
+    display: none;
   }
 }
