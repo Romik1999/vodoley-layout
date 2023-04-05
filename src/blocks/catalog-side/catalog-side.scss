@@ -12,6 +12,11 @@
     background-color: rgba(0, 0, 0, 0.5);
     transform: translateX(-100%);
     transition: 0.3s;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding-right: 45px;
   }
 
   &--active {
@@ -56,6 +61,13 @@
 
     @media screen and (max-width: 900px) {
       display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 30px;
+      height: 30px;
+      top: 10px;
+      right: 10px;
     }
 
     &:before {

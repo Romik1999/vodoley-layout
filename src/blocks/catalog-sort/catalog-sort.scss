@@ -1,10 +1,62 @@
 @import "../../scss/vars";
 
 .catalog-sort {
+  position: relative;
+
+  &__title {
+    display: none;
+
+    @media screen and (max-width: 600px) {
+      display: block;
+      font-size: 18px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 30px;
+      position: relative;
+    }
+
+    & svg,
+    & img {
+      width: 16px;
+      height: 8px;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      transition: 0.2s;
+    }
+
+    &.active {
+      & svg,
+      & img {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
   &__items {
     display: flex;
     align-items: center;
     column-gap: 20px;
+
+    @media screen and (max-width: 600px) {
+      position: absolute;
+      top: 100%;
+      background-color: $white;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: 0.2s;
+      z-index: 10;
+      max-height: 0;
+      overflow: hidden;
+      right: 0;
+    }
+
+    &.active {
+      @media screen and (max-width: 600px) {
+        max-height: 120px;
+      }
+    }
   }
 
   &__item {
@@ -16,9 +68,20 @@
     text-decoration: none;
     color: $black;
 
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
+      padding: 10px 20px;
+      width: 100%;
+    }
+
     &--active,
-    &:hover{
+    &:hover {
       font-weight: 500;
+
+      @media screen and (max-width: 600px) {
+        background-color: $purple;
+        color: $white;
+      }
     }
   }
 }
