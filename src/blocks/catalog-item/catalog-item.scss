@@ -12,11 +12,7 @@
     height: 410px;
   }
 
-  @media screen and (max-width: 650px) {
-    height: 450px;
-  }
-
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 900px) {
     height: 100%;
   }
 
@@ -42,7 +38,7 @@
       padding-bottom: 12px;
     }
 
-    & .catalog-item__button {
+    & .catalog-item__bottom {
       transform: translateY(0);
       opacity: 1;
     }
@@ -165,20 +161,15 @@
   }
 
   &__bottom {
-    @media screen and (max-width: 576px) {
-      margin-top: auto;
-      margin-bottom: 0;
-    }
-  }
-
-  &__button {
-    transform: translateY(-50%);
+    transform: translateY(-100%);
     opacity: 0;
     transition: 0.2s;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 900px) {
       opacity: 1;
       transform: none;
+      margin-top: auto;
+      margin-bottom: 0;
     }
   }
 }
