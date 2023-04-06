@@ -32,6 +32,11 @@
     &.active {
       background-color: $purple;
       color: $white;
+
+      &:hover {
+        background-color: $purple;
+        color: $white;
+      }
     }
 
     &:hover {

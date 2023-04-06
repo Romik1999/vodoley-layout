@@ -92,4 +92,30 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
+
+    const brands = new Swiper('.brands-slider', {
+        slidesPerView: 3,
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.brands-slider__arrow--next',
+            prevEl: '.brands-slider__arrow--prev',
+        },
+        pagination: {
+            el: ".brands-count",
+            type: "fraction",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            575: {
+                slidesPerView: 2,
+            },
+            900: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
 });

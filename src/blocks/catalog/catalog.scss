@@ -11,17 +11,24 @@
   }
 
   &__side {
+    min-width: 280px;
     max-width: 280px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 
     @media screen and (max-width: 900px) {
       width: auto;
+      min-width: unset;
+      max-width: unset;
     }
   }
 
   &__content {
-    max-width: 100%;
+    max-width: 910px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   &__button {
