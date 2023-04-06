@@ -85,7 +85,15 @@
     width: 100%;
   }
 
-  &__pagination{
+  &__pagination {
+    margin-top: 20px;
+  }
+
+  &__also {
+    margin-top: 60px;
+  }
+
+  &__brands {
     margin-top: 20px;
   }
 }
