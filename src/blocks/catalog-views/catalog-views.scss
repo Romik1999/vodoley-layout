@@ -3,7 +3,7 @@
 .catalog-views {
   position: relative;
 
-  &__title{
+  &__title {
     display: none;
 
     @media screen and (max-width: 576px) {
@@ -16,7 +16,7 @@
     }
 
     & svg,
-    & img{
+    & img {
       width: 16px;
       height: 8px;
       position: absolute;
@@ -26,9 +26,9 @@
       transition: 0.2s;
     }
 
-    &.active{
+    &.active {
       & svg,
-      & img{
+      & img {
         transform: translateY(-50%) rotate(180deg);
       }
     }
@@ -51,7 +51,7 @@
       overflow: hidden;
     }
 
-    &.active{
+    &.active {
       @media screen and (max-width: 576px) {
         max-height: 120px;
       }
@@ -67,6 +67,7 @@
     padding-bottom: 10px;
     transition: 0.2s;
     cursor: pointer;
+    text-decoration: none;
 
     @media screen and (max-width: 576px) {
       font-size: 16px;
@@ -74,7 +75,7 @@
       width: 100%;
     }
 
-    &:hover{
+    &:hover {
       color: $black;
     }
 

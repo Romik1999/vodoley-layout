@@ -118,4 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+
+    const catalogItemGallery = new Swiper('.good-slider', {
+        slidesPerView: 1,
+        loop: false,
+        spaceBetween: 10,
+        pagination: {
+            el: ".good-slider__pagination",
+            type: "bullets",
+        },
+    });
+
+    // let thumbs = document.querySelectorAll('.good-slider__pagination .swiper-pagination-bullet');
+    //
+    // thumbs.forEach((thumb) => {
+    //     thumb.addEventListener('mouseenter', (e) => {
+    //         e.target.dispatchEvent('click');
+    //     })
+    // });
 });

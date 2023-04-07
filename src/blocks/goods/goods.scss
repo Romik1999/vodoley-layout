@@ -1,0 +1,29 @@
+@import "../../scss/vars";
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  @media screen and (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+
+    @media screen and (max-width: 576px) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
