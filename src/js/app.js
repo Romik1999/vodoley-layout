@@ -18,46 +18,52 @@ document.addEventListener('DOMContentLoaded', () => {
     let filterSortButton = document.querySelector('.catalog-sort__title');
     let filterSortItems = document.querySelector('.catalog-sort__items');
 
-    filterButton.addEventListener('click', () => {
-        if (filterButton.classList.contains('active')) {
-            filterButton.classList.remove('active')
-            filterMobile.classList.remove('catalog-side--active')
-            document.body.style.overflow = 'visible'
-        } else {
-            filterButton.classList.add('active')
-            filterMobile.classList.add('catalog-side--active')
-            document.body.style.overflow = 'hidden'
-        }
-    });
+    if (filterButton) {
+        filterButton.addEventListener('click', () => {
+            if (filterButton.classList.contains('active')) {
+                filterButton.classList.remove('active')
+                filterMobile.classList.remove('catalog-side--active')
+                document.body.style.overflow = 'visible'
+            } else {
+                filterButton.classList.add('active')
+                filterMobile.classList.add('catalog-side--active')
+                document.body.style.overflow = 'hidden'
+            }
+        });
+    }
+    if (filterCloser) {
+        filterCloser.addEventListener('click', () => {
+            if (filterButton.classList.contains('active')) {
+                filterButton.classList.remove('active')
+                filterMobile.classList.remove('catalog-side--active')
+                document.body.style.overflow = 'visible'
+            }
+        });
+    }
 
-    filterCloser.addEventListener('click', () => {
-        if (filterButton.classList.contains('active')) {
-            filterButton.classList.remove('active')
-            filterMobile.classList.remove('catalog-side--active')
-            document.body.style.overflow = 'visible'
-        }
-    });
+    if (filterViewButton) {
+        filterViewButton.addEventListener('click', () => {
+            if (filterViewButton.classList.contains('active')) {
+                filterViewButton.classList.remove('active')
+                filterViewItems.classList.remove('active')
+            } else {
+                filterViewButton.classList.add('active')
+                filterViewItems.classList.add('active')
+            }
+        });
+    }
 
-    filterViewButton.addEventListener('click', () => {
-        if (filterViewButton.classList.contains('active')) {
-            filterViewButton.classList.remove('active')
-            filterViewItems.classList.remove('active')
-        } else {
-            filterViewButton.classList.add('active')
-            filterViewItems.classList.add('active')
-        }
-    });
-
-    filterSortButton.addEventListener('click', () => {
-        if (filterSortButton.classList.contains('active')) {
-            filterSortButton.classList.remove('active')
-            filterSortItems.classList.remove('active')
-        } else {
-            filterSortButton.classList.add('active')
-            filterSortItems.classList.add('active')
-        }
-    });
-
+    if (filterSortButton) {
+        filterSortButton.addEventListener('click', () => {
+            if (filterSortButton.classList.contains('active')) {
+                filterSortButton.classList.remove('active')
+                filterSortItems.classList.remove('active')
+            } else {
+                filterSortButton.classList.add('active')
+                filterSortItems.classList.add('active')
+            }
+        });
+    }
 
     let catalogPresets = document.querySelectorAll('.catalog-presets__group');
     let catalogPresetButtons = document.querySelectorAll('.catalog-presets__more');
@@ -136,4 +142,23 @@ document.addEventListener('DOMContentLoaded', () => {
     //         e.target.dispatchEvent('click');
     //     })
     // });
+
+    var collectionGallery = new Swiper(".collection-thumbs", {
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".collection-thumbs__arrow--next",
+            prevEl: ".collection-thumbs__arrow--prev",
+        },
+    });
+    var collectionGallery2 = new Swiper(".collection-gallery", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".collection-gallery__arrow--next",
+            prevEl: ".collection-gallery__arrow--prev",
+        },
+        thumbs: {
+            swiper: collectionGallery,
+        },
+    });
 });
