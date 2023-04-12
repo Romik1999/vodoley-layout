@@ -1,20 +1,16 @@
 <div class="collection-goods">
     <div class="collection-goods__title">Элементы коллекции</div>
     <div class="collection-goods__filters">
-
+        <div class="collection-goods__filter collection-goods__filter--active">Все</div>
+        <div class="collection-goods__filter">Керамогранит</div>
+        <div class="collection-goods__filter">Мозаика</div>
+        <div class="collection-goods__filter">Унитазы</div>
+        <div class="collection-goods__filter">Раковины</div>
     </div>
     <div class="collection-goods__items">
         <div class="collection-goods__item">
-            <a class="good" href="./design.html">
-                <div class="design-item__img">
-                    <img src="./img/collection-design-1.png">
-                </div>
-                <div class="design-item__title">Совмещенный санузел</div>
-                <div class="design-item__square">
-                    <span class="design-item__square-title">Площадь:</span>
-                    <span class="design-item__square-value">5м²</span>
-                </div>
-            </a>
+            @@include('good/good.html', {image1: 'good-img-1.png', image2: 'good-img-2.png', image3: 'good-img-3.png',
+            image4: 'good-img-1.png', image5: 'good-img-2.png',})
         </div>
     </div>
 </div>
