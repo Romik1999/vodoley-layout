@@ -161,4 +161,39 @@ document.addEventListener('DOMContentLoaded', () => {
             swiper: collectionGallery,
         },
     });
+
+    let goodsBuyButtons = document.querySelectorAll('.js-cart-add')
+
+    if (goodsBuyButtons) {
+        goodsBuyButtons.forEach((goodsBuyButton)=>{
+            goodsBuyButton.addEventListener('click', (e)=>{
+                if (e.target.classList.contains('js-cart-add')){
+                    e.target.classList.remove('js-cart-add')
+                    e.target.classList.add('js-cart-remove')
+                    e.target.text = 'В корзине'
+                } else {
+                    e.target.classList.remove('js-cart-remove')
+                    e.target.classList.add('js-cart-add')
+                    e.target.text = 'Добавить в корзину'
+                }
+            })
+        })
+    }
+
+    let goodsCompareButtons = document.querySelectorAll('.js-compare-add')
+    console.log(goodsCompareButtons.length);
+    if (goodsCompareButtons) {
+        goodsCompareButtons.forEach((goodsCompareButton)=>{
+            goodsCompareButton.addEventListener('click', ()=>{
+                if (goodsCompareButton.classList.contains('js-compare-add')){
+                    goodsCompareButton.classList.remove('js-compare-add')
+                    goodsCompareButton.classList.add('js-compare-remove')
+                } else {
+                    goodsCompareButton.classList.remove('js-compare-remove')
+                    goodsCompareButton.classList.add('js-compare-add')
+                }
+            })
+        })
+    }
+
 });

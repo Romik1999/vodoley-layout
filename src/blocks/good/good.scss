@@ -200,6 +200,13 @@
           stroke: $purple;
         }
       }
+
+      &.js-compare-remove{
+        & svg {
+          fill: $purple;
+          stroke: $purple;
+        }
+      }
     }
   }
 }
