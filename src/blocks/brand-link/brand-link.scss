@@ -1,0 +1,60 @@
+@import "../../scss/vars";
+
+.brand-link {
+  display: flex;
+  background: #F7F8FA;
+  border-radius: 4px;
+  padding: 20px 16px;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+
+  @media screen and (max-width: 769px) {
+    padding: 15px;
+  }
+
+  @media screen and (max-width: 380px) {
+    padding: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 130%;
+    color: $purple;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+
+    @media screen and (max-width: 380px) {
+      font-size: 12px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__img {
+    display: flex;
+    max-width: 150px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+
+    @media screen and (max-width: 380px) {
+      max-width: 100px;
+      max-height: 50px;
+    }
+
+    & img {
+      display: flex;
+      width: auto;
+      height: auto;
+
+      @media screen and (max-width: 380px) {
+        width: 100%;
+      }
+    }
+  }
+
+}
