@@ -3,11 +3,18 @@
 .collection-goods {
   &__filters {
     display: flex;
-    column-gap: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 15px;
+    }
   }
 
-  &__filer {
+  &__filter {
     border: 1px solid #E2E2E2;
+    background-color: $white;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -19,16 +26,38 @@
     padding: 7px 15px;
     box-sizing: border-box;
     height: 30px;
+    transition: 0.2s;
+    cursor: pointer;
 
     &--active {
       border: 1px solid #333333;
       box-shadow: inset 0px 0px 0px 1.6px #333333;
+
+      &:hover {
+        border: 1px solid #333333;
+        background-color: $white !important;
+      }
+    }
+
+    &:hover {
+      background-color: #F4F6F7;
     }
   }
 
   &__items {
-    display: flex;
-    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+    @media screen and (max-width: 769px) {
+      grid-gap: 15px;
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
   }
 
   &__item {
