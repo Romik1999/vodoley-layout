@@ -1,0 +1,67 @@
+@import "../../scss/vars";
+
+.tabs {
+
+  &__triggers {
+    display: flex;
+  }
+
+  &__trigger {
+    border-radius: 8px 8px 0px 0px;
+    padding: 10px 15px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 115%;
+    text-transform: uppercase;
+    transition: 0.2s;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: $purple;
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.2s;
+    }
+
+    &--active {
+      background-color: $white;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+      color: #64707B;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__items {
+    border-top: 1px solid #EEF0F3;
+    box-sizing: border-box;
+
+    background: $white;
+    mix-blend-mode: normal;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 0px 8px 8px 8px
+  }
+
+  &__item {
+    display: none;
+    padding: 26px 20px;
+
+
+    &--active {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    columns: 2 auto;
+  }
+}

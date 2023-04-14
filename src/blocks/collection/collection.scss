@@ -17,7 +17,15 @@
     }
   }
 
-  &__props {
+  &__goods{
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__tabs {
     margin-bottom: 60px;
 
     @media screen and (max-width: 769px) {

@@ -182,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let goodsCompareButtons = document.querySelectorAll('.js-compare-add')
-    console.log(goodsCompareButtons.length);
     if (goodsCompareButtons) {
         goodsCompareButtons.forEach((goodsCompareButton)=>{
             goodsCompareButton.addEventListener('click', ()=>{
