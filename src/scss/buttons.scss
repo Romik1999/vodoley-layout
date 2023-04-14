@@ -21,6 +21,10 @@
   cursor: pointer;
   text-decoration: none;
 
+  @media screen and (max-width: 769px) {
+    font-size: 14px;
+  }
+
   &--sm {
     height: 30px;
   }

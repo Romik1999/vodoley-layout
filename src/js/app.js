@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
     var collectionGallery2 = new Swiper(".collection-gallery", {
+        slidesPerView: 1,
         spaceBetween: 10,
         navigation: {
             nextEl: ".collection-gallery__arrow--next",
