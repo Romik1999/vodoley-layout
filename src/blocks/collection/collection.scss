@@ -3,16 +3,33 @@
 .collection {
   &__info {
     margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__design {
     margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__other {
     margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__feedback {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 30px;
+    }
   }
 }
