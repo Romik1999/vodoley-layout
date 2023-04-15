@@ -196,4 +196,18 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+
+    let tabsTriggers = document.querySelectorAll('.tabs__trigger');
+    if (tabsTriggers) {
+        tabsTriggers.forEach((tabsTrigger)=>{
+            tabsTrigger.addEventListener('click', (e)=>{
+                let activeTab = e.target.dataset.trigger;
+                e.target.parentNode.querySelector('.tabs__trigger--active').classList.remove('tabs__trigger--active')
+                e.target.classList.add('tabs__trigger--active')
+                document.querySelector('.tabs__items .tabs__item--active').classList.remove('tabs__item--active')
+                document.querySelector('.tabs__items [data-tab="' + activeTab + '"]').classList.add('tabs__item--active')
+            })
+        })
+    }
+
 });
