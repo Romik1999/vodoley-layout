@@ -1,6 +1,6 @@
 @import "../../scss/vars";
 
-.catalog-item {
+.catalog-collection {
   position: relative;
   height: 450px;
 
@@ -31,14 +31,14 @@
   }
 
   &:hover {
-    & .catalog-item__wrapper {
+    & .catalog-collection__wrapper {
       position: absolute;
       height: auto;
       z-index: 10;
       padding-bottom: 12px;
     }
 
-    & .catalog-item__bottom {
+    & .catalog-collection__bottom {
       transform: translateY(0);
       opacity: 1;
     }
