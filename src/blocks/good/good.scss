@@ -1,0 +1,48 @@
+@import "../../scss/vars";
+
+.also {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+
+  @media screen and (max-width: 576px) {
+    padding: 20px 10px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 115%;
+    margin-bottom: 30px;
+  }
+
+  &__links {
+    columns: 4 auto;
+    column-gap: 20px;
+
+    @media screen and (max-width: 1024px) {
+      columns: 2 auto;
+    }
+    @media screen and (max-width: 576px) {
+      columns: 1 auto;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 120%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+    color: $black;
+    margin-bottom: 12px;
+    display: block;
+    width: fit-content;
+
+    &:hover {
+      text-decoration: underline;
+      color: $purple;
+    }
+  }
+}
