@@ -242,4 +242,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    var relatedElements = new Swiper(".related-elements", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".related-elements__arrow--next",
+            prevEl: ".related-elements__arrow--prev",
+        }
+    });
+
 });
