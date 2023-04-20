@@ -210,4 +210,25 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+
+    var goodGallery = new Swiper(".good-thumbs", {
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".good-thumbs__arrow--next",
+            prevEl: ".good-thumbs__arrow--prev",
+        },
+    });
+    var goodGallery2 = new Swiper(".good-images", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".good-images__arrow--next",
+            prevEl: ".good-images__arrow--prev",
+        },
+        thumbs: {
+            swiper: goodGallery,
+        },
+    });
+
 });
