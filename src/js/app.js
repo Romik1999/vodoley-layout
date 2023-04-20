@@ -231,4 +231,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+
+
+    var goodElements = new Swiper(".good-elements", {
+        slidesPerView: 6,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".good-elements__arrow--next",
+            prevEl: ".good-elements__arrow--prev",
+        }
+    });
+
 });
