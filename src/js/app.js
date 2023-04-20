@@ -239,7 +239,24 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: ".good-elements__arrow--next",
             prevEl: ".good-elements__arrow--prev",
-        }
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            575: {
+                slidesPerView: 2,
+            },
+            769: {
+                slidesPerView: 3,
+            },
+            990: {
+                slidesPerView: 4,
+            },
+            1199: {
+                slidesPerView: 5,
+            },
+        },
     });
 
     var relatedElements = new Swiper(".related-elements", {
