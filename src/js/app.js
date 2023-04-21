@@ -265,7 +265,21 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: ".related-elements__arrow--next",
             prevEl: ".related-elements__arrow--prev",
-        }
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            575: {
+                slidesPerView: 2,
+            },
+            769: {
+                slidesPerView: 3,
+            },
+            990: {
+                slidesPerView: 4,
+            }
+        },
     });
 
 });

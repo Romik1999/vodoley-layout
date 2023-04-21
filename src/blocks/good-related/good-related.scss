@@ -53,10 +53,13 @@
   position: relative;
   box-sizing: border-box;
 
-  @media screen and (max-width: 1450px) {
-    margin: 0 45px;
+  @media screen and (max-width: 1250px) {
+    margin: 0 25px;
   }
 
+  @media screen and (max-width: 576px) {
+    margin: 0 15px;
+  }
 
   &__arrow {
     position: absolute;
@@ -73,12 +76,37 @@
     top: 50%;
     transform: translateY(-50%);
 
+    @media screen and (max-width: 576px) {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+
+    & img,
+    & svg {
+      height: 11px;
+      width: 17px;
+
+      @media screen and (max-width: 576px) {
+        height: 8.25px;
+        width: 12.5px;
+      }
+    }
+
+    &:hover{
+      opacity: 1;
+    }
+
     &--prev {
       left: -50px;
       border-radius: 25px 0 0 25px;
 
-      @media screen and (max-width: 1450px) {
-        left: 0;
+      @media screen and (max-width: 1250px) {
+        left: -20px;
+      }
+
+      @media screen and (max-width: 576px) {
+        left: -5px;
       }
     }
 
@@ -87,8 +115,12 @@
       z-index: 12;
       border-radius: 0px 25px 25px 0px;
 
-      @media screen and (max-width: 1450px) {
-        right: 0;
+      @media screen and (max-width: 1250px) {
+        right: -20px;
+      }
+
+      @media screen and (max-width: 576px) {
+        right: -5px;
       }
     }
   }
@@ -110,6 +142,10 @@
     height: 240px;
     display: flex;
     margin-bottom: 16px;
+
+    @media screen and (max-width: 576px) {
+      height: 200px;
+    }
 
     & img {
       width: 100%;
