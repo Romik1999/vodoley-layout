@@ -1,0 +1,51 @@
+@import "../../scss/vars";
+
+.design {
+  &__info {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__design {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__goods{
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__tabs {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__other {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__feedback {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 40px;
+    }
+  }
+}
