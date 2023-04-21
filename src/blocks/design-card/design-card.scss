@@ -1,0 +1,211 @@
+@import "../../scss/vars";
+
+.design-card {
+  position: relative;
+  width: 100%;
+
+  @media screen and (max-width: 900px) {
+    height: 100%;
+    max-width: 450px;
+  }
+
+  @media screen and (max-width: 900px) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__wrapper {
+    background: $white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    padding: 11px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.2s;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__like {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    z-index: 10;
+
+    opacity: 0.3;
+    border-radius: 4px;
+
+    & svg {
+      fill: $white;
+      stroke: $white;
+      transition: 0.2s;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--active {
+      & svg {
+        fill: $purple;
+        stroke: $purple;
+      }
+    }
+  }
+
+  &__slider {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &-slider {
+    padding-bottom: 6px;
+    position: relative;
+
+    max-width: 100%;
+    width: 100%;
+
+    &__item{
+      max-width: 100%;
+      display: flex;
+
+      & img{
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+      }
+    }
+
+    &__pagination {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      top: unset;
+      bottom: 0 !important;
+      height: 100%;
+
+      & .swiper-pagination-bullet {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 0;
+        margin: 0 !important;
+        display: flex;
+        align-items: flex-end;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #CCCCCC;
+          transition: 0.2s;
+        }
+
+        &-active {
+
+          &:after {
+            background-color: $purple;
+          }
+        }
+      }
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 117%;
+    margin-bottom: 8px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 18px;
+    }
+  }
+
+  &__country {
+    font-size: 12px;
+    line-height: 167%;
+    text-transform: uppercase;
+    color: #64707B;
+    margin-bottom: 1px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 138%;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: $black;
+    transition: 0.2s;
+    cursor: pointer;
+
+    @media screen and (max-width: 576px) {
+      font-size: 15px;
+    }
+
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  &__article {
+
+  }
+
+  &-article {
+    font-size: 14px;
+    line-height: 140%;
+
+    &__text {
+      color: $black;
+    }
+
+    &__number {
+      color: #777777;
+    }
+  }
+
+  &__bottom {
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+    margin-top: 16px;
+  }
+
+  &__button {
+    cursor: pointer;
+
+    &--compare {
+      & svg {
+        fill: $white;
+        stroke: #C4C4C4;
+        transition: 0.2s;
+      }
+
+      &:hover {
+        & svg {
+          stroke: $purple;
+        }
+      }
+
+      &.js-compare-remove{
+        & svg {
+          fill: $purple;
+          stroke: $purple;
+        }
+      }
+    }
+  }
+}

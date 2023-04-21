@@ -1,0 +1,48 @@
+<section class="catalog">
+    <div class="cont">
+        @@include('page-title/page-title.html', {customClass: 'catalog__title', text: 'Готовые дизайн-проекты'})
+        <div class="catalog__wrapper">
+            <div class="catalog__side">
+                @@include('catalog-side/catalog-side.html')
+            </div>
+            <div class="catalog__content">
+                <div class="catalog__presets">
+                    @@include('catalog-presets/catalog-presets.html')
+                </div>
+                <div class="catalog__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+                        <path d="M4.71 0v147.877l178.335 178.335V512l145.91-48.637V326.211L507.29 147.877V0H4.71zm453.943 127.731L280.318 306.066v122.243l-48.637 16.212V306.066L53.347 127.731V48.637h405.306v79.094z"></path>
+                    </svg>
+                    Фильтр
+                </div>
+                <div class="catalog__top">
+                    <div class="catalog__views">
+                        @@include('catalog-views/catalog-views(goods).html')
+                    </div>
+                    <div class="catalog__sort">
+                        @@include('catalog-sort/catalog-sort.html')
+                    </div>
+                </div>
+                <div class="catalog__designs">
+                    <div class="catalog__design">
+                        @@include('design-card/design-card.html', {image1: 'good-img-1.png', image2: 'good-img-2.png', image3: 'good-img-3.png', image4: 'good-img-1.png', image5: 'good-img-2.png',})
+                    </div>
+                    <div class="catalog__good">
+                        @@include('catalog-good/catalog-good.html', {image1: 'good-img-1.png', image2: 'good-img-2.png', image3:
+                        'good-img-3.png',
+                        image4: 'good-img-1.png', image5: 'good-img-2.png',})
+                    </div>
+                </div>
+                <div class="catalog__pagination">
+                    @@include('pagination/pagination.html')
+                </div>
+                <div class="catalog__also">
+                    @@include('also/also.html')
+                </div>
+                <div class="catalog__brands">
+                    @@include('brands/brands.html')
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
