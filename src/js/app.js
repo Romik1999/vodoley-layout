@@ -295,4 +295,25 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+
+    var collectionGallery = new Swiper(".design-thumbs", {
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".design-thumbs__arrow--next",
+            prevEl: ".design-thumbs__arrow--prev",
+        },
+    });
+    var collectionGallery2 = new Swiper(".design-gallery", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".design-gallery__arrow--next",
+            prevEl: ".design-gallery__arrow--prev",
+        },
+        thumbs: {
+            swiper: collectionGallery,
+        },
+    });
+
 });
