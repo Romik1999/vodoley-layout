@@ -1,0 +1,152 @@
+@import "../../scss/vars";
+
+.collection-card {
+  min-height: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+
+  &:hover {
+    & .collection-card__wrapper {
+      position: absolute;
+      width: 100%;
+      z-index: 20;
+
+      @media screen and (max-width: 576px) {
+        position: relative;
+      }
+    }
+
+    & .collection-card__bottom {
+      display: flex;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    background-color: $white;
+    padding: 10px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__like {
+    height: 32px;
+    width: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s;
+    z-index: 10;
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+    & img,
+    & svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 8px;
+  }
+
+  &__country {
+    font-size: 12px;
+    line-height: 167%;
+    text-transform: uppercase;
+    color: #64707B;
+    margin-bottom: 1px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 125%;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: $black;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  &__size {
+    font-size: 14px;
+    line-height: 129%;
+    margin-bottom: 16px;
+
+    &--title {
+      color: $black;
+    }
+
+    &--text {
+      color: #64707B;
+    }
+  }
+
+  &__goods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__good {
+    display: flex;
+    cursor: pointer;
+    width: 26px;
+    min-width: 26px;
+    height: 26px;
+    transition: 0.2s;
+    border: 1px solid transparent;
+
+    & img,
+    & svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      border: 1px solid $purple;
+    }
+  }
+
+  &__bottom {
+    margin-top: 16px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+
+    @media screen and (max-width: 576px) {
+      display: flex;
+    }
+  }
+
+}
