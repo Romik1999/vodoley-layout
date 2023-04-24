@@ -145,6 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
     });
+    const designCardImagessd = new Swiper('.design-card-slider', {
+        slidesPerView: 1,
+        loop: false,
+        spaceBetween: 10,
+        pagination: {
+            el: ".design-card-slider__pagination",
+            type: "bullets",
+            clickable: true,
+        },
+    });
 
     // let thumbs = document.querySelectorAll('.good-slider__pagination .swiper-pagination-bullet');
     //
