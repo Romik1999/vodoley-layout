@@ -16,6 +16,7 @@
         position: unset;
       }
     }
+
     & .good-card__bottom {
       display: flex;
     }
@@ -88,6 +89,14 @@
     font-size: 16px;
     line-height: 125%;
     margin-bottom: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    color: $black;
+
+    &:hover {
+      color: $purple;
+    }
   }
 
   &__article {
@@ -157,7 +166,7 @@
   }
 
   &__button.good-card__button--minus,
-  &__button.good-card__button--plus{
+  &__button.good-card__button--plus {
     display: flex;
     align-items: center;
     justify-content: center;
