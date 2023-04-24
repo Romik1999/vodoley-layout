@@ -208,55 +208,6 @@
 
 }
 
-.good-slider {
-  &__item {
-    height: 240px;
-    display: flex;
-
-    & img,
-    & svg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &__pagination {
-    display: flex;
-    align-items: center;
-    column-gap: 4px;
-    top: unset;
-    bottom: 0 !important;
-    height: 100%;
-
-    & .swiper-pagination-bullet {
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      border-radius: 0;
-      margin: 0 !important;
-      display: flex;
-      align-items: flex-end;
-
-      &:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #CCCCCC;
-        transition: 0.2s;
-      }
-
-      &-active {
-
-        &:after {
-          background-color: $purple;
-        }
-      }
-    }
-  }
-}
-
 .good-rate {
   display: flex;
   align-items: end;

@@ -124,33 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-
-    // const catalogItemGallery = new Swiper('.good-slider', {
-    //     slidesPerView: 1,
-    //     loop: false,
-    //     spaceBetween: 10,
-    //     pagination: {
-    //         el: ".good-slider__pagination",
-    //         type: "bullets",
-    //     },
-    // });
-
-    const designCardImages = new Swiper('.good-slider', {
+    const designCardImages = new Swiper('.card-slider', {
         slidesPerView: 1,
         loop: false,
         spaceBetween: 10,
         pagination: {
-            el: ".good-slider__pagination",
-            type: "bullets",
-            clickable: true,
-        },
-    });
-    const designCardImagessd = new Swiper('.design-card-slider', {
-        slidesPerView: 1,
-        loop: false,
-        spaceBetween: 10,
-        pagination: {
-            el: ".design-card-slider__pagination",
+            el: ".card-slider__pagination",
             type: "bullets",
             clickable: true,
         },
