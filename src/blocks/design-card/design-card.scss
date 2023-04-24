@@ -14,19 +14,32 @@
     width: 100%;
   }
 
+  &:hover {
+    & .design-card__wrapper {
+      position: absolute;
+      width: 100%;
+      z-index: 20;
+      @media screen and (max-width: 576px) {
+        position: unset;
+      }
+    }
+
+    & .design-card__bottom {
+      display: flex;
+    }
+  }
+
   &__wrapper {
-    background: $white;
+    position: relative;
+    background-color: $white;
+    padding: 10px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
     border-radius: 8px;
-    padding: 11px;
-    height: 100%;
-    width: 100%;
     box-sizing: border-box;
-    transition: 0.2s;
-
+    width: 100%;
+    z-index: 10;
     display: flex;
     flex-direction: column;
-    position: relative;
   }
 
   &__like {
@@ -75,11 +88,11 @@
     max-width: 100%;
     width: 100%;
 
-    &__item{
+    &__item {
       max-width: 100%;
       display: flex;
 
-      & img{
+      & img {
         width: 100%;
         height: 240px;
         object-fit: cover;
@@ -122,23 +135,18 @@
     }
   }
 
-  &__price {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 117%;
-    margin-bottom: 8px;
+  &__img {
+    width: 100%;
+    height: 240px;
+    min-height: 240px;
+    display: flex;
+    margin-bottom: 16px;
 
-    @media screen and (max-width: 576px) {
-      font-size: 18px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-  }
-
-  &__country {
-    font-size: 12px;
-    line-height: 167%;
-    text-transform: uppercase;
-    color: #64707B;
-    margin-bottom: 1px;
   }
 
   &__title {
@@ -159,53 +167,29 @@
     }
   }
 
-  &__article {
-
-  }
-
-  &-article {
+  &__article,
+  &__author {
     font-size: 14px;
     line-height: 140%;
 
-    &__text {
+    &--text {
       color: $black;
     }
 
-    &__number {
+    &--number {
       color: #777777;
     }
   }
 
   &__bottom {
     transition: 0.2s;
-    display: flex;
     align-items: center;
     column-gap: 26px;
     margin-top: 16px;
-  }
+    display: none;
 
-  &__button {
-    cursor: pointer;
-
-    &--compare {
-      & svg {
-        fill: $white;
-        stroke: #C4C4C4;
-        transition: 0.2s;
-      }
-
-      &:hover {
-        & svg {
-          stroke: $purple;
-        }
-      }
-
-      &.js-compare-remove{
-        & svg {
-          fill: $purple;
-          stroke: $purple;
-        }
-      }
+    @media screen and (max-width: 576px) {
+      display: flex;
     }
   }
 }

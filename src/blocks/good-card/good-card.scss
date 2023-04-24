@@ -11,6 +11,10 @@
       position: absolute;
       width: 100%;
       z-index: 20;
+
+      @media screen and (max-width: 576px) {
+        position: unset;
+      }
     }
     & .good-card__bottom {
       display: flex;
