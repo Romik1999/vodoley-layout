@@ -172,11 +172,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (e.target.classList.contains('js-cart-add')){
                     e.target.classList.remove('js-cart-add')
                     e.target.classList.add('js-cart-remove')
-                    e.target.text = 'В корзине'
+                    e.target.innerHTML = 'В корзине'
                 } else {
                     e.target.classList.remove('js-cart-remove')
                     e.target.classList.add('js-cart-add')
-                    e.target.text = 'Добавить в корзину'
+                    e.target.innerHTML = 'Добавить в корзину'
                 }
             })
         })
