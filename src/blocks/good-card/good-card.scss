@@ -45,6 +45,10 @@
     }
   }
 
+  &--related{
+    min-height: 350px;
+  }
+
   &__wrapper {
     position: relative;
     background-color: $white;
