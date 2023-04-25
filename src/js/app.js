@@ -9,6 +9,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    let pageUpButton = document.querySelector('.page-up')
+
+    pageUpButton.addEventListener('click', () => {
+        document.body.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        setTimeout(function () {
+            pageUpButton.classList.remove('page-up--active')
+        }, 500)
+    });
+
+    let scrollpos = window.scrollY;
+    let scrollChange = 100;
+    let add_class_on_scroll = () => pageUpButton.classList.add("page-up--active");
+    let remove_class_on_scroll = () => pageUpButton.classList.remove("page-up--active");
+
+    window.addEventListener('scroll', function () {
+        scrollpos = window.scrollY;
+        if (scrollpos >= scrollChange) {
+            add_class_on_scroll()
+        } else {
+            remove_class_on_scroll()
+        }
+    })
+
+
     let filterButton = document.querySelector('.catalog__button');
     let filterMobile = document.querySelector('.catalog-side');
     let filterCloser = document.querySelector('.catalog-side__close');
@@ -167,9 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let goodsBuyButtons = document.querySelectorAll('.js-cart-add')
 
     if (goodsBuyButtons) {
-        goodsBuyButtons.forEach((goodsBuyButton)=>{
-            goodsBuyButton.addEventListener('click', (e)=>{
-                if (e.target.classList.contains('js-cart-add')){
+        goodsBuyButtons.forEach((goodsBuyButton) => {
+            goodsBuyButton.addEventListener('click', (e) => {
+                if (e.target.classList.contains('js-cart-add')) {
                     e.target.classList.remove('js-cart-add')
                     e.target.classList.add('js-cart-remove')
                     e.target.innerHTML = 'В корзине'
@@ -184,9 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let goodsCompareButtons = document.querySelectorAll('.js-compare-add')
     if (goodsCompareButtons) {
-        goodsCompareButtons.forEach((goodsCompareButton)=>{
-            goodsCompareButton.addEventListener('click', ()=>{
-                if (goodsCompareButton.classList.contains('js-compare-add')){
+        goodsCompareButtons.forEach((goodsCompareButton) => {
+            goodsCompareButton.addEventListener('click', () => {
+                if (goodsCompareButton.classList.contains('js-compare-add')) {
                     goodsCompareButton.classList.remove('js-compare-add')
                     goodsCompareButton.classList.add('js-compare-remove')
                 } else {
@@ -200,9 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let likeButtons = document.querySelectorAll('.js-like-add')
 
     if (likeButtons) {
-        likeButtons.forEach((likeButton)=>{
-            likeButton.addEventListener('click', ()=>{
-                if (likeButton.classList.contains('js-like-add')){
+        likeButtons.forEach((likeButton) => {
+            likeButton.addEventListener('click', () => {
+                if (likeButton.classList.contains('js-like-add')) {
                     likeButton.classList.remove('js-like-add')
                     likeButton.classList.add('js-like-remove')
                 } else {
@@ -216,8 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let tabsTriggers = document.querySelectorAll('.tabs__trigger');
     if (tabsTriggers) {
-        tabsTriggers.forEach((tabsTrigger)=>{
-            tabsTrigger.addEventListener('click', (e)=>{
+        tabsTriggers.forEach((tabsTrigger) => {
+            tabsTrigger.addEventListener('click', (e) => {
                 let activeTab = e.target.dataset.tab;
                 e.target.parentNode.querySelector('.tabs__trigger--active').classList.remove('tabs__trigger--active')
                 e.target.classList.add('tabs__trigger--active')
@@ -247,7 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
             swiper: goodGallery,
         },
     });
-
 
 
     var goodElements = new Swiper(".good-elements", {

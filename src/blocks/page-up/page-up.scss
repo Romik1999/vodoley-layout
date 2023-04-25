@@ -16,6 +16,15 @@
   bottom: 50px;
   left: 50px;
   opacity: 0;
+  z-index: 9999;
+
+  @media screen and (max-width: 1250px) {
+    left: 15px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    left: 7.5px;
+  }
 
   &--active {
     opacity: 1;
