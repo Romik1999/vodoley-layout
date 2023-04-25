@@ -29,6 +29,22 @@
     }
   }
 
+  &--min {
+    min-height: 260px;
+
+    & .good-card__title {
+      margin-bottom: 12px;
+    }
+
+    & .good-card__bottom{
+      margin-top: 0;
+    }
+
+    & .good-card__img {
+      height: 140px;
+    }
+  }
+
   &__wrapper {
     position: relative;
     background-color: $white;
