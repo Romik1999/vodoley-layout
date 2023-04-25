@@ -197,6 +197,22 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    let likeButtons = document.querySelectorAll('.js-like-add')
+
+    if (likeButtons) {
+        likeButtons.forEach((likeButton)=>{
+            likeButton.addEventListener('click', ()=>{
+                if (likeButton.classList.contains('js-like-add')){
+                    likeButton.classList.remove('js-like-add')
+                    likeButton.classList.add('js-like-remove')
+                } else {
+                    likeButton.classList.remove('js-like-remove')
+                    likeButton.classList.add('js-like-add')
+                }
+            })
+        })
+    }
+
 
     let tabsTriggers = document.querySelectorAll('.tabs__trigger');
     if (tabsTriggers) {

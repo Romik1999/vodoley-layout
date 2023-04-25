@@ -1,0 +1,9 @@
+@import "../../scss/vars";
+
+.btn-buy {
+  &.js-cart-remove {
+    background-color: transparent;
+    border: 1px solid $purple;
+    color: $purple;
+  }
+}
