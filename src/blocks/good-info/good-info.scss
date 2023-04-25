@@ -156,6 +156,17 @@
     align-items: center;
   }
 
+  &__button {
+    width: 25px;
+    height: 25px;
+
+    & button{
+      width: 100%;
+      height: 100%;
+      padding: 3.5px;
+    }
+  }
+
   &__actions {
     padding: 18px 16px;
 
