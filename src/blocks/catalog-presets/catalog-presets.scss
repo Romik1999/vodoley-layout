@@ -24,12 +24,12 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    &.max-content{
+    &.max-content {
       max-height: 30px;
       overflow: hidden;
       transition: 0.3s;
 
-      &.active{
+      &.active {
         max-height: 200px;
       }
     }
@@ -55,13 +55,13 @@
       border: 1px solid #333333;
       box-shadow: inset 0px 0px 0px 1.6px #333333;
 
-      &:hover{
+      &:hover {
         border: 1px solid #333333;
-        background-color: $white!important;
+        background-color: $white !important;
       }
     }
 
-    &:hover{
+    &:hover {
       background-color: #F4F6F7;
     }
   }
@@ -74,8 +74,9 @@
     margin-top: 10px;
     display: none;
     cursor: pointer;
+    width: fit-content;
 
-    &:hover{
+    &:hover {
       color: $purple;
     }
   }
