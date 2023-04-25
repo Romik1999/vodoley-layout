@@ -2,45 +2,11 @@
 
 .collection-goods {
   &__filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+
     margin-bottom: 25px;
 
     @media screen and (max-width: 769px) {
       margin-bottom: 15px;
-    }
-  }
-
-  &__filter {
-    border: 1px solid #E2E2E2;
-    background-color: $white;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 13px;
-    line-height: 115%;
-    color: $black;
-    padding: 7px 15px;
-    box-sizing: border-box;
-    height: 30px;
-    transition: 0.2s;
-    cursor: pointer;
-
-    &--active {
-      border: 1px solid #333333;
-      box-shadow: inset 0px 0px 0px 1.6px #333333;
-
-      &:hover {
-        border: 1px solid #333333;
-        background-color: $white !important;
-      }
-    }
-
-    &:hover {
-      background-color: #F4F6F7;
     }
   }
 
